@@ -2,7 +2,7 @@
 
 use("pet_store")
 
-db.products.drop() // elimina los documentos creados en la colleccion anteriormente
+// db.products.drop() // elimina los documentos creados en la colleccion anteriormente
 
 db.products.insertMany([
   {
@@ -10,6 +10,7 @@ db.products.insertMany([
     title: "Camas Acolchada",
     price: 30.54,
     description: "Cama acolchada luxury disponible en tres medidas y tres colores, pequeña, mediana y super, vino tinto, azul y cafe.",
+    category: "cuidado",
     image: "https://www.ammascotas.com/wp-content/uploads/2018/08/Luxury-Acolchada.jpg"
   },
   {
@@ -17,6 +18,7 @@ db.products.insertMany([
     title: "Coffee Bones",
     price: 3.02,
     description: "Sticks en madera de café, producto 100% NATURAL para mascotas, elaborado a partir de la madera del café.",
+    category: "alimentos",
     image: "https://www.ammascotas.com/wp-content/uploads/2018/10/CoffeBones.jpg"
   },
   {
@@ -24,6 +26,7 @@ db.products.insertMany([
     title: "Pañoleta Doble Faz",
     price: 5.20,
     description: "Pañoleta doble faz para mascotas con broches para poner dos diseños en uno.",
+    category: "cuidado",
     image: "https://www.ammascotas.com/wp-content/uploads/2019/09/zorros.jpg"
   },
   {
@@ -31,6 +34,7 @@ db.products.insertMany([
     title: "Vaso Medidor Alimento",
     price: 2.25,
     description: "Vaso medidor de alimento, recoge 150 gramos de alimento.",
+    category: "alimentos",
     image: "https://www.ammascotas.com/wp-content/uploads/2016/10/vasomedidor.jpg"
   },
   {
@@ -38,6 +42,7 @@ db.products.insertMany([
     title: "Dosificador Agua Botellón",
     price: 18.33,
     description: "Comedero dosificador de agua botellón para perros y gatos práctico y fácil de usar, diseño exclusivo, producto biodegradable y amigable con el medio ambiente.",
+    category: "alimentos",
     image: "https://www.ammascotas.com/wp-content/uploads/2019/08/3.jpg"
   },
   {
@@ -45,6 +50,7 @@ db.products.insertMany([
     title: "Frisbee Profesional",
     price: 5.69,
     description: "Frisbee profesional ideal para mejorar el bienestar de tu mascota, aprovecha un dia de campo o de parque para compartir con tu peludo.",
+    category: "juguetes",
     image: "https://www.ammascotas.com/wp-content/uploads/2016/10/frisbeeprofesional.jpg"
   },
   {
@@ -52,6 +58,7 @@ db.products.insertMany([
     title: "Guante Pet Gloves",
     price: 11.59,
     description: "Guante Pet Gloves para perro, ideal para cuidar el pelo de tu mascota, recolecta la caída del pelo. ",
+    category: "cuidado",
     image: "https://www.ammascotas.com/wp-content/uploads/2019/09/glovesmorado.jpg"
   },
   {
@@ -59,6 +66,7 @@ db.products.insertMany([
     title: "Pelota Nudo Multicolor",
     price: 7.24,
     description: "Pelota nudo multicolor disponible en dos tamaños, PEQUEÑA Y GRANDE, ideal para gatos y perros de razas pequeñas.",
+    category: "juguetes",
     image: "https://www.ammascotas.com/wp-content/uploads/2016/11/pelotanuedomulticolor.jpg"
   },
   {
@@ -66,13 +74,15 @@ db.products.insertMany([
     title: "Comedero Dosificador Alimento",
     price: 20.02,
     description: "Comedero dosificador de alimento para perros y gatos, ideal para el bienestar de tu mascota, gradúa a tu manera la cantidad de alimento que quieres que tu mascota coma, si es un gato y sabe medir lo mejor es dejar rodar la comida, para perro es ideal ir midiendo el aproximado del alimento. ",
+    category: "alimentos",
     image: "https://www.ammascotas.com/wp-content/uploads/2018/09/dosificadordobleuso4.jpg"
   },
   {
     _id: 10,
-    title: "Cepillos Dentaless",
+    title: "Cepillos Dentales",
     price: 9.20,
     description: "Cepillos dentales x 4 ideal para la higiene de tu mascota, masajea las encías y dientes, reduce el sarro y la placa.",
+    category: "cuidado",
     image: "https://www.ammascotas.com/wp-content/uploads/2016/11/cepillodentalx4.jpg"
   },
   {
@@ -80,6 +90,7 @@ db.products.insertMany([
     title: "Guacal # 7",
     price: 52.00,
     description: "Guacal # 7 en plástico reforzado, biodegradable y amigable con el medio ambiente, ideal para viajes internaciones, el producto cumple con los requerimientos de la aeronáutica civil, apto para mascotas de razas grandes.",
+    category: "cuidado",
     image: "https://www.ammascotas.com/wp-content/uploads/2017/09/guacal7.jpg"
   },
   {
@@ -87,6 +98,7 @@ db.products.insertMany([
     title: "Capa Impermeable",
     price: 14.89,
     description: "Capa impermeable para mascotas, ideal para que tu peludo no tenga que mojarse en los días de lluvia.",
+    category: "cuidado",
     image: "https://www.ammascotas.com/wp-content/uploads/2019/04/impermeable-impermeable-transparente-para.jpg"
   },
   {
@@ -94,6 +106,7 @@ db.products.insertMany([
     title: "Comedero Antireflujo",
     price: 10.96,
     description: "Comedero antireflujo pequeño lo mejor para el bienestar de tu mascota, producto ideal para que tu mascota baje la velocidad al momento de comer, evita el reflujo en su cuerpo y es ideal para aquellas mascotas con sobrepeso.",
+    category: "alimentos",
     image: "https://www.ammascotas.com/wp-content/uploads/2018/04/comederoantireflujomediano.jpg"
   },
   {
@@ -101,6 +114,7 @@ db.products.insertMany([
     title: "Cobija",
     price: 19.46,
     description: "Cobija para perros y gatos, los momentos mas agradables son aquellos que atrapan a tu mascota mientras duerme, una cobija suave y abrigadora que le brindará todo el calor de hogar que necesita.",
+    category: "cuidado",
     image: "https://www.ammascotas.com/wp-content/uploads/2017/07/cobija8.jpg"
   },
   {
@@ -108,6 +122,7 @@ db.products.insertMany([
     title: "Potty Pet",
     price: 118.61,
     description: "Potty pet para perros disponible en tres tamaños, lea por favor las dimensiones y descripciones de cada uno en la parte inferior.",
+    category: "cuidado",
     image: "https://www.ammascotas.com/wp-content/uploads/2017/06/potty-pet-grande-Collie.jpg"
   },
   {
@@ -115,6 +130,7 @@ db.products.insertMany([
     title: "Hueso Masajeador de Encías",
     price: 5.27,
     description: "Hueso masajeador de encías para perros, disponible en dos medidas 4-5 (mediano) y 5-6 (grande) único color transparente.",
+    category: "alimentos",
     image: "https://www.ammascotas.com/wp-content/uploads/2018/04/Huesomasajeador5-6grande.jpg"
   },
   {
@@ -122,6 +138,7 @@ db.products.insertMany([
     title: "Cepillo de Alambre Perro",
     price: 7.94 ,
     description: "Comedero antireflujo pequeño lo mejor para el bienestar de tu mascota, producto ideal para que tu mascota baje la velocidad al momento de comer, evita el reflujo en su cuerpo y es ideal para aquellas mascotas con sobrepeso.",
+    category: "cuidado",
     image: "https://www.ammascotas.com/wp-content/uploads/2018/04/CepilloAlambreMediano.jpg"
   },
   {
@@ -129,6 +146,7 @@ db.products.insertMany([
     title: "Pala Arenera Gato",
     price: 5.62,
     description: "Pala recogedora de arena para baño de gato, disponible en varios colores se recomienda preguntar al momento de la compra. Producto no tóxico, biodegradable y amigable con el medio ambiente.",
+    category: "cuidado",
     image: "https://www.ammascotas.com/wp-content/uploads/2016/11/pala-gato-naranja.jpg"
   },
   {
@@ -136,6 +154,7 @@ db.products.insertMany([
     title: "Bolsas Repuesto x 12",
     price: 28.09,
     description: "Bolsa plástica POR 12 UNIDADES para recoger las heces de tu mascota, variedad de colores, producto 100% higiénico ya que no se tiene contacto directo con los desechos, producto biodegradable y amigable con el medio ambiente.",
+    category: "cuidado",
     image: "https://www.ammascotas.com/wp-content/uploads/2016/11/bolsasrepuestox12.jpg"
   },
   {
@@ -143,6 +162,7 @@ db.products.insertMany([
     title: "Pet Foot Wash",
     price: 27.32,
     description: "Limpiador de patas para mascotas, limpia rápidamente las patitas de tu peludo, con sistema de cerdas siliconadas suaves que remueven la suciedad de entre sus dedos. ",
+    category: "cuidado",
     image: "https://www.ammascotas.com/wp-content/uploads/2020/06/Pet-Foot-Wash-Azul.jpg"
   }
 ])
